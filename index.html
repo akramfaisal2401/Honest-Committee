@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Honest Committee</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body { font-family: sans-serif; margin: 0; text-align: center; background: #f4f4f4; }
+        .header { background: #222; color: white; padding: 40px; }
+        .container { padding: 20px; }
+        .building-img { width: 100%; max-width: 800px; border-radius: 8px; }
+        .grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
+        .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); width: 200px; }
+        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function App() {
+            return (
+                <div>
+                    <div className="header">
+                        <h1>Honest Committee</h1>
+                        <p>Transparency & Integrity</p>
+                    </div>
+                    <div className="container">
+                        <h2>Our Headquarters</h2>
+                        <img src="images/building.jpg" className="building-img" alt="Building" />
+                        
+                        <div className="grid">
+                            <div className="card">
+                                <img src="images/president.jpg" alt="President" />
+                                <h3>President</h3>
+                                <p>Name Here</p>
+                            </div>
+                            <div className="card">
+                                <img src="images/secretary.jpg" alt="Secretary" />
+                                <h3>Secretary</h3>
+                                <p>Name Here</p>
+                            </div>
+                            <div className="card">
+                                <img src="images/clerk.jpg" alt="Clerk" />
+                                <h3>Clerk</h3>
+                                <p>Name Here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        }
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
